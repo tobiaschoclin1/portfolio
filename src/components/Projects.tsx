@@ -1,6 +1,6 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Github } from 'lucide-react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 export default function Projects() {
   const projects = [
@@ -25,8 +25,27 @@ export default function Projects() {
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const fiddoVideoRef = useRef<HTMLVideoElement | null>(null);
   const fiddoIndex = projects.findIndex((project) => project.title === 'Fiddo');
   const isFiddoHovered = hoveredIndex === fiddoIndex;
+
+  const handleMouseEnter = (index: number, isFiddo: boolean) => {
+    setHoveredIndex(index);
+
+    if (isFiddo && fiddoVideoRef.current) {
+      fiddoVideoRef.current.currentTime = 0;
+      void fiddoVideoRef.current.play();
+    }
+  };
+
+  const handleMouseLeave = (isFiddo: boolean) => {
+    setHoveredIndex(null);
+
+    if (isFiddo && fiddoVideoRef.current) {
+      fiddoVideoRef.current.pause();
+      fiddoVideoRef.current.currentTime = 0;
+    }
+  };
 
   const cardVariants: Variants = {
     initial: { 
@@ -76,8 +95,8 @@ export default function Projects() {
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
               viewport={{ once: true }}
-              onMouseEnter={() => setHoveredIndex(i)}
-              onMouseLeave={() => setHoveredIndex(null)}
+              onMouseEnter={() => handleMouseEnter(i, isFiddo)}
+              onMouseLeave={() => handleMouseLeave(isFiddo)}
               className={`group relative overflow-hidden bg-[#27293d] p-10 transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                 ${isFiddoHovered && !fiddoActive ? 'opacity-25 scale-95 blur-sm' : 'opacity-100'}
                 ${fiddoActive ? 'lg:col-span-2 lg:min-h-[320px] z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
@@ -86,11 +105,12 @@ export default function Projects() {
               {isFiddo && (
                 <div className={`absolute inset-0 w-full h-full transition-opacity duration-500 z-10 ${fiddoActive ? 'opacity-100' : 'opacity-0'}`}>
                   <video 
+                    ref={fiddoVideoRef}
                     className="w-full h-full object-cover pointer-events-none"
-                    autoPlay 
                     muted 
                     loop 
                     playsInline
+                    preload="auto"
                   >
                     <source src="/video_fiddo.mov" type="video/quicktime" />
                   </video>
