@@ -25,6 +25,8 @@ export default function Projects() {
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const fiddoIndex = projects.findIndex((project) => project.title === 'Fiddo');
+  const isFiddoHovered = hoveredIndex === fiddoIndex;
 
   const cardVariants: Variants = {
     initial: { 
@@ -37,21 +39,6 @@ export default function Projects() {
       opacity: 1, 
       y: 0, 
       transition: { duration: 0.5 }
-    },
-    hover: { 
-      scale: 1.1, // Un poco más de escala para resaltar
-      y: -10,
-      zIndex: 50,
-      transition: { 
-        duration: 0.4, 
-        ease: "easeOut" 
-      }
-    },
-    exit: {
-      scale: 1,
-      y: 0,
-      zIndex: 1,
-      transition: { duration: 0.3 }
     }
   };
 
@@ -68,29 +55,38 @@ export default function Projects() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
         <AnimatePresence>
-          {projects.map((p, i) => (
+          {projects.map((p, i) => {
+            const isFiddo = p.title === 'Fiddo';
+            const fiddoActive = isFiddo && hoveredIndex === i;
+
+            return (
             <motion.a 
               href={p.link} 
               target="_blank" 
               rel="noreferrer" 
               key={i} 
+              layout
               variants={cardVariants}
               initial="initial"
               whileInView="animate"
-              whileHover="hover"
-              exit="exit"
+              whileHover={{
+                scale: fiddoActive ? 1.04 : 1.03,
+                y: -8,
+                zIndex: fiddoActive ? 60 : 10,
+                transition: { duration: 0.3, ease: 'easeOut' }
+              }}
               viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
-              // Efecto de oscurecer las otras tarjetas
-              className={`group relative overflow-hidden bg-[#27293d] p-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50 
-                ${hoveredIndex !== null && hoveredIndex !== i ? 'opacity-20 scale-95 blur-[2px]' : 'opacity-100'}`}
+              className={`group relative overflow-hidden bg-[#27293d] p-10 transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
+                ${isFiddoHovered && !fiddoActive ? 'opacity-25 scale-95 blur-sm' : 'opacity-100'}
+                ${fiddoActive ? 'lg:col-span-2 lg:min-h-[320px] z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
             >
               {/* Video para Fiddo */}
-              {p.title === "Fiddo" && (
-                <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 flex items-center justify-center">
+              {isFiddo && (
+                <div className={`absolute inset-0 w-full h-full transition-opacity duration-500 z-10 ${fiddoActive ? 'opacity-100' : 'opacity-0'}`}>
                   <video 
-                    className="w-full h-full object-contain pointer-events-none"
+                    className="w-full h-full object-cover pointer-events-none"
                     autoPlay 
                     muted 
                     loop 
@@ -104,7 +100,7 @@ export default function Projects() {
               )}
 
               {/* Contenido dinámico */}
-              <div className="relative z-20 flex flex-col h-full transition-all duration-300 group-hover:scale-95">
+              <div className={`relative z-20 flex flex-col h-full transition-all duration-300 ${fiddoActive ? 'lg:scale-95' : 'group-hover:scale-95'}`}>
                 <div className="flex flex-col group-hover:items-center transition-all duration-500">
                   <div className="w-14 h-14 mb-8 bg-[#1e1e2f] border border-gray-700 rounded-full flex items-center justify-center group-hover:border-[#FF4A57] transition-colors flex-shrink-0">
                     <span className="text-[#FF4A57] text-xl font-bold">{i + 1}</span>
@@ -128,7 +124,8 @@ export default function Projects() {
                 </div>
               </div>
             </motion.a>
-          ))}
+            );
+          })}
         </AnimatePresence>
       </div>
 
