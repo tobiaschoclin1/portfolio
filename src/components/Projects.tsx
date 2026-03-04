@@ -47,16 +47,19 @@ export default function Projects() {
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className="group relative overflow-hidden bg-[#27293d] p-10 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,74,87,0.15)] transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-gray-700"
           >
-            {/* Video para Fiddo corregido sin comentarios internos */}
+            {/* Contenedor del video con degradado para legibilidad */}
             {p.title === "Fiddo" && (
-              <video 
-                src="/video_fiddo.mov"
-                className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none z-0"
-                autoPlay 
-                muted 
-                loop 
-                playsInline
-              />
+              <div className="absolute inset-0 w-full h-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0">
+                <video 
+                  src="/video_fiddo.mov"
+                  className="w-full h-full object-cover object-top" 
+                  autoPlay 
+                  muted 
+                  loop 
+                  playsInline
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#27293d] via-[#27293d]/60 to-transparent" />
+              </div>
             )}
 
             <div className="relative z-10 flex flex-col h-full">
