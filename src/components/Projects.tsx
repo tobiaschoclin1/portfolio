@@ -50,7 +50,7 @@ export default function Projects() {
             {/* Renderizado condicional del video para Fiddo */}
             {p.title === "Fiddo" && (
               <video 
-                src="/video_fiddo.mp4"
+                src="/video_fiddo.mov"
                 className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
                 autoPlay 
                 muted 
