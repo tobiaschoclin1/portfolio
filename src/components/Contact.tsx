@@ -12,14 +12,23 @@ export default function Contact() {
         Conecta conmigo
       </motion.h2>
       <motion.form 
+        action="https://api.web3forms.com/submit" 
+        method="POST"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
         className="max-w-2xl flex flex-col gap-8"
       >
-        <input type="email" placeholder="Email" className="bg-[#27293d] text-white p-6 text-lg outline-none focus:ring-2 focus:ring-[#FF4A57] transition" />
-        <textarea placeholder="Mensaje" rows={4} className="bg-[#27293d] text-white p-6 text-lg outline-none focus:ring-2 focus:ring-[#FF4A57] transition"></textarea>
+        {/* Reemplaza TU_ACCESS_KEY con la clave que te enviaron al correo */}
+        <input type="hidden" name="access_key" value="a258a1c7-e099-420f-a5fe-fc7544be0fa8" />
+        
+        <input type="email" name="email" required placeholder="Email" className="bg-[#27293d] text-white p-6 text-lg outline-none focus:ring-2 focus:ring-[#FF4A57] transition" />
+        <textarea name="message" required placeholder="Mensaje" rows={4} className="bg-[#27293d] text-white p-6 text-lg outline-none focus:ring-2 focus:ring-[#FF4A57] transition"></textarea>
+        
+        {/* Redirección opcional o mensaje de éxito oculto */}
+        <input type="hidden" name="redirect" value="https://web3forms.com/success" />
+
         <button type="submit" className="bg-[#FF4A57] text-white px-10 py-4 text-lg font-bold hover:bg-rose-600 transition flex items-center justify-center gap-3 w-max mt-4 hover:scale-105 transform">
           Enviar <span className="text-xl">▶</span>
         </button>

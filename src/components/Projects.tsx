@@ -3,10 +3,25 @@ import { Github } from 'lucide-react';
 
 export default function Projects() {
   const projects = [
-    { title: "Fiddo", desc: "Plataforma web para la gestión de usuarios fieles y beneficios.", tech: "Java, React, PostgreSQL", link: "https://github.com/tobiaschoclin1/mercadoLibre.git" },
-    { title: "Farmacia", desc: "Solución integral enfocada en el control de stock y operaciones.", tech: "Node.js, Express", link: "https://github.com/tobiaschoclin1/farmacia.git" },
-    { title: "Crypto Quant", desc: "Análisis cuantitativo para seguimiento de precios y trading.", tech: "Integración API, Python", link: "https://github.com/tobiaschoclin1/crypto-quant.git" }
-  ];
+  { 
+    title: "Fiddo", 
+    desc: "Plataforma web para la gestión de usuarios fieles y beneficios.", 
+    tech: "Java, React, PostgreSQL", 
+    link: "https://github.com/tobiaschoclin1/mercadoLibre.git" 
+  },
+  { 
+    title: "Farmacia", 
+    desc: "Solución integral enfocada en el control de stock y operaciones.", 
+    tech: "Node.js, Express", 
+    link: "https://github.com/tobiaschoclin1/farmacia.git" 
+  },
+  { 
+    title: "Crypto Quant", 
+    desc: "Análisis cuantitativo para seguimiento de precios y trading.", 
+    tech: "Integración API, Python", 
+    link: "https://github.com/tobiaschoclin1/crypto-quant.git" 
+  }
+];
 
   return (
     <section id="projects" className="relative py-24">

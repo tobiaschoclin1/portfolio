@@ -11,14 +11,14 @@ export default function About() {
         className="max-w-4xl"
       >
         <h1 className="text-7xl md:text-8xl font-bold leading-tight mb-2 tracking-tight">
-          Tobias Choclin
-        </h1>
-        <h2 className="text-4xl md:text-5xl font-semibold text-[#FF4A57] mb-8">
-          Desarrollador de Software
-        </h2>
-        <p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl leading-relaxed">
-          [cite_start]Estudiante de Ingeniería en Informática e Ingeniero de Soporte IT en Red Hat[cite: 5]. [cite_start]Apasionado por crear soluciones escalables y llevarlas a la vida mediante código[cite: 6].
-        </p>
+  Tobias Choclin
+</h1>
+<h2 className="text-4xl md:text-5xl font-semibold text-[#FF4A57] mb-8">
+  Desarrollador de Software
+</h2>
+<p className="text-gray-400 text-lg md:text-xl mb-12 max-w-2xl leading-relaxed">
+  Estudiante de Ingeniería en Informática e Ingeniero de Soporte IT en Red Hat. Apasionado por crear soluciones escalables y llevarlas a la vida mediante código.
+</p>
         <button className="bg-[#FF4A57] w-max text-white px-8 py-4 text-lg font-bold hover:bg-rose-600 transition hover:scale-105 transform shadow-lg shadow-[#FF4A57]/20 flex items-center gap-3">
           <Download size={24} /> Descargar CV
         </button>
