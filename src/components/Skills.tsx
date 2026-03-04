@@ -12,7 +12,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="relative py-24 border-t border-gray-800/50 pr-16 lg:pr-0">
+    <section id="skills" className="relative py-24 border-t border-gray-800/50">
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -36,10 +36,6 @@ export default function Skills() {
             <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
           </motion.div>
         ))}
-      </div>
-      <div className="absolute right-0 top-0 h-full w-px bg-gray-700 hidden lg:block">
-        <div className="absolute -left-[5px] top-1/4 w-3 h-3 rounded-full border-2 border-[#FF4A57] bg-[#1e1e2f]"></div>
-        <div className="absolute -left-[5px] top-1/2 w-3 h-3 rounded-full bg-[#FF4A57]"></div>
       </div>
     </section>
   );

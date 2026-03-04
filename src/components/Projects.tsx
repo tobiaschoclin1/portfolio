@@ -47,7 +47,7 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" className="relative py-24 pr-16 lg:pr-0">
+    <section id="projects" className="relative py-24">
       <motion.h2 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +88,7 @@ export default function Projects() {
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
               className={`group relative overflow-hidden bg-[#27293d] p-10 transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
-                ${isAnyProjectActive && !fiddoActive && !farmaciaActive ? 'opacity-25 scale-95 blur-sm' : 'opacity-100'}
+                ${isAnyProjectActive && !fiddoActive && !farmaciaActive && !cryptoActive ? 'opacity-25 scale-95 blur-sm' : 'opacity-100'}
                 ${fiddoActive || farmaciaActive || cryptoActive ? 'lg:col-span-2 lg:min-h-[320px] z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
             >
               {/* Video para Fiddo */}
@@ -176,13 +176,6 @@ export default function Projects() {
             );
           })}
         </AnimatePresence>
-      </div>
-
-      {/* Decoración lateral */}
-      <div className="absolute right-0 top-0 h-full w-px bg-gray-700 hidden lg:block">
-        <div className="absolute -left-[5px] top-1/4 w-3 h-3 rounded-full border-2 border-[#FF4A57] bg-[#1e1e2f]"></div>
-        <div className="absolute -left-[5px] top-1/2 w-3 h-3 rounded-full bg-[#FF4A57]"></div>
-        <div className="absolute -left-[5px] bottom-1/4 w-3 h-3 rounded-full bg-[#FF4A57]"></div>
       </div>
     </section>
   );

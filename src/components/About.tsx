@@ -30,11 +30,6 @@ export default function About() {
         </a>
         
       </motion.div>
-      <div className="absolute right-0 top-1/4 h-1/2 w-px bg-gray-700 hidden lg:block">
-        <div className="absolute -left-[5px] top-0 w-3 h-3 rounded-full bg-[#FF4A57]"></div>
-        <div className="absolute -left-[5px] top-1/2 w-3 h-3 rounded-full border-2 border-[#FF4A57] bg-[#1e1e2f]"></div>
-        <div className="absolute -left-[5px] bottom-0 w-3 h-3 rounded-full border-2 border-[#FF4A57] bg-[#1e1e2f]"></div>
-      </div>
     </section>
   );
 }

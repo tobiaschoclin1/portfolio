@@ -2,6 +2,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import SideNav from './components/SideNav';
 import { Github, Mail } from 'lucide-react';
 
 export default function App() {
@@ -18,7 +19,8 @@ export default function App() {
           </a>
         </div>
       </nav>
-      <div className="max-w-6xl mx-auto px-8">
+      <SideNav />
+      <div className="max-w-6xl mx-auto px-8 pr-24 lg:pr-8">
         <About />
         <Skills />
         <Projects />
