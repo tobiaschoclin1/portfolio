@@ -6,13 +6,13 @@ export default function Projects() {
   { 
     title: "Fiddo", 
     desc: "Plataforma web para la gestión de usuarios fieles y beneficios.", 
-    tech: "Java, React, PostgreSQL", 
+    tech: "Node.js, Express", 
     link: "https://github.com/tobiaschoclin1/mercadoLibre.git" 
   },
   { 
     title: "Farmacia", 
     desc: "Solución integral enfocada en el control de stock y operaciones.", 
-    tech: "Node.js, Express", 
+    tech: "Java, React, PostgreSQL", 
     link: "https://github.com/tobiaschoclin1/farmacia.git" 
   },
   { 
