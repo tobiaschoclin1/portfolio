@@ -1,6 +1,6 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Github } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function Projects() {
   const projects = [
@@ -25,12 +25,30 @@ export default function Projects() {
   ];
 
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const fiddoVideoRef = useRef<HTMLVideoElement>(null);
+  const farmaciaVideoRef = useRef<HTMLVideoElement>(null);
+  const cryptoVideoRef = useRef<HTMLVideoElement>(null);
   const fiddoIndex = projects.findIndex((project) => project.title === 'Fiddo');
   const farmaciaIndex = projects.findIndex((project) => project.title === 'Farmacia');
   const cryptoIndex = projects.findIndex((project) => project.title === 'Crypto Quant');
   const isFiddoHovered = hoveredIndex === fiddoIndex;
   const isFarmaciaHovered = hoveredIndex === farmaciaIndex;
   const isCryptoHovered = hoveredIndex === cryptoIndex;
+
+  useEffect(() => {
+    if (isFiddoHovered && fiddoVideoRef.current) {
+      fiddoVideoRef.current.currentTime = 0;
+      fiddoVideoRef.current.play().catch(() => {});
+    }
+    if (isFarmaciaHovered && farmaciaVideoRef.current) {
+      farmaciaVideoRef.current.currentTime = 0;
+      farmaciaVideoRef.current.play().catch(() => {});
+    }
+    if (isCryptoHovered && cryptoVideoRef.current) {
+      cryptoVideoRef.current.currentTime = 0;
+      cryptoVideoRef.current.play().catch(() => {});
+    }
+  }, [isFiddoHovered, isFarmaciaHovered, isCryptoHovered]);
 
   const cardVariants: Variants = {
     initial: { 
@@ -94,8 +112,8 @@ export default function Projects() {
               {isFiddo && fiddoActive && (
                 <div className="absolute inset-0 w-full h-full transition-opacity duration-500 z-10 opacity-100">
                   <video
+                    ref={fiddoVideoRef}
                     className="w-full h-full object-cover pointer-events-none"
-                    autoPlay
                     muted
                     loop
                     playsInline
@@ -113,8 +131,8 @@ export default function Projects() {
               {isFarmacia && farmaciaActive && (
                 <div className="absolute inset-0 w-full h-full transition-opacity duration-500 z-10 opacity-100">
                   <video
+                    ref={farmaciaVideoRef}
                     className="w-full h-full object-cover pointer-events-none"
-                    autoPlay
                     muted
                     loop
                     playsInline
@@ -132,8 +150,8 @@ export default function Projects() {
               {isCrypto && cryptoActive && (
                 <div className="absolute inset-0 w-full h-full transition-opacity duration-500 z-10 opacity-100">
                   <video
+                    ref={cryptoVideoRef}
                     className="w-full h-full object-cover pointer-events-none"
-                    autoPlay
                     muted
                     loop
                     playsInline
