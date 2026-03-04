@@ -96,17 +96,23 @@ export default function Projects() {
               initial="initial"
               whileInView="animate"
               whileHover={{
-                scale: fiddoActive || farmaciaActive || cryptoActive ? 1.02 : 1.03,
-                y: -8,
+                scale: fiddoActive || farmaciaActive || cryptoActive ? 1 : 1.03,
+                y: fiddoActive || farmaciaActive || cryptoActive ? 0 : -8,
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
               viewport={{ once: true }}
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
-              style={{ zIndex: fiddoActive || farmaciaActive || cryptoActive ? 60 : 10 }}
+              style={{ 
+                zIndex: fiddoActive || farmaciaActive || cryptoActive ? 60 : 10,
+                position: fiddoActive || farmaciaActive || cryptoActive ? 'absolute' : 'relative',
+                width: fiddoActive || farmaciaActive || cryptoActive ? 'calc(66.666% - 1.33rem)' : 'auto',
+                left: fiddoActive || farmaciaActive || cryptoActive ? '0' : 'auto',
+                top: fiddoActive || farmaciaActive || cryptoActive ? '0' : 'auto'
+              }}
               className={`group relative overflow-hidden bg-[#27293d] p-10 transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                 ${isAnyProjectActive && !fiddoActive && !farmaciaActive && !cryptoActive ? 'opacity-25 scale-95 blur-sm' : 'opacity-100'}
-                ${fiddoActive || farmaciaActive || cryptoActive ? 'lg:col-span-2 lg:min-h-[320px] shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
+                ${fiddoActive || farmaciaActive || cryptoActive ? 'min-h-[320px] shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
             >
               {/* Video para Fiddo */}
               {isFiddo && fiddoActive && (
