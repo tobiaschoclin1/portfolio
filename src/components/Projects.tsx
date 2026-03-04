@@ -47,11 +47,11 @@ export default function Projects() {
             transition={{ delay: i * 0.1, duration: 0.5 }}
             className="group relative overflow-hidden bg-[#27293d] p-10 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(255,74,87,0.15)] transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-gray-700"
           >
-            {/* Renderizado condicional del video para Fiddo */}
+            {/* Video para Fiddo corregido sin comentarios internos */}
             {p.title === "Fiddo" && (
               <video 
                 src="/video_fiddo.mov"
-                className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none"
+                className="absolute inset-0 w-full h-full object-contain opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none z-0"
                 autoPlay 
                 muted 
                 loop 
@@ -59,7 +59,6 @@ export default function Projects() {
               />
             )}
 
-            {/* Contenido de la tarjeta (con z-index para estar sobre el video) */}
             <div className="relative z-10 flex flex-col h-full">
               <div className="w-14 h-14 mb-8 bg-[#1e1e2f] border border-gray-700 rounded-full flex items-center justify-center group-hover:border-[#FF4A57] transition-colors">
                 <span className="text-[#FF4A57] text-xl font-bold">{i + 1}</span>
@@ -83,7 +82,6 @@ export default function Projects() {
         ))}
       </div>
 
-      {/* Línea decorativa lateral */}
       <div className="absolute right-0 top-1/4 h-1/2 w-px bg-gray-700 hidden lg:block">
         <div className="absolute -left-[5px] top-1/4 w-3 h-3 rounded-full border-2 border-[#FF4A57] bg-[#1e1e2f]"></div>
         <div className="absolute -left-[5px] top-3/4 w-3 h-3 rounded-full bg-[#FF4A57]"></div>
