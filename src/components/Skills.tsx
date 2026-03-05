@@ -1,14 +1,17 @@
 import { motion } from 'framer-motion';
 import { SiReact, SiSpringboot, SiDocker, SiNodedotjs, SiPostgresql, SiPython } from 'react-icons/si';
+import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
+  const { t } = useTranslation();
+  
   const skills = [
-    { name: "React & TypeScript", desc: "Desarrollo de interfaces dinámicas y tipado estático.", icon: <SiReact size={32} /> },
-    { name: "Java & Spring Boot", desc: "Creación de APIs RESTful y arquitecturas robustas.", icon: <SiSpringboot size={32} /> },
-    { name: "Node.js & Express", desc: "Backend escalable y manejo de asincronía.", icon: <SiNodedotjs size={32} /> },
-    { name: "Bases de Datos", desc: "Modelado y persistencia relacional con PostgreSQL.", icon: <SiPostgresql size={32} /> },
-    { name: "Docker", desc: "Containerización para asegurar entornos consistentes.", icon: <SiDocker size={32} /> },
-    { name: "Python", desc: "Análisis de datos, automatización e integración.", icon: <SiPython size={32} /> },
+    { name: t('skills.items.react.name'), desc: t('skills.items.react.desc'), icon: <SiReact size={32} /> },
+    { name: t('skills.items.java.name'), desc: t('skills.items.java.desc'), icon: <SiSpringboot size={32} /> },
+    { name: t('skills.items.node.name'), desc: t('skills.items.node.desc'), icon: <SiNodedotjs size={32} /> },
+    { name: t('skills.items.db.name'), desc: t('skills.items.db.desc'), icon: <SiPostgresql size={32} /> },
+    { name: t('skills.items.docker.name'), desc: t('skills.items.docker.desc'), icon: <SiDocker size={32} /> },
+    { name: t('skills.items.python.name'), desc: t('skills.items.python.desc'), icon: <SiPython size={32} /> },
   ];
 
   return (
@@ -19,7 +22,7 @@ export default function Skills() {
         viewport={{ once: true }}
         className="text-[#FF4A57] text-4xl md:text-5xl font-bold mb-16"
       >
-        Habilidades
+        {t('skills.title')}
       </motion.h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {skills.map((s, i) => (

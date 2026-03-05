@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "brand": "amogoe."
+  },
+  "about": {
+    "name": "Tobias Choclin",
+    "role": "Desarrollador de Software",
+    "description": "Estudiante de Ingeniería en Informática e Ingeniero de Soporte IT en Red Hat. Apasionado por crear soluciones escalables y llevarlas a la vida mediante código.",
+    "downloadCV": "Descargar CV"
+  },
+  "skills": {
+    "title": "Habilidades",
+    "items": {
+      "react": {
+        "name": "React & TypeScript",
+        "desc": "Desarrollo de interfaces dinámicas y tipado estático."
+      },
+      "java": {
+        "name": "Java & Spring Boot",
+        "desc": "Creación de APIs RESTful y arquitecturas robustas."
+      },
+      "node": {
+        "name": "Node.js & Express",
+        "desc": "Backend escalable y manejo de asincronía."
+      },
+      "db": {
+        "name": "Bases de Datos",
+        "desc": "Modelado y persistencia relacional con PostgreSQL."
+      },
+      "docker": {
+        "name": "Docker",
+        "desc": "Containerización para asegurar entornos consistentes."
+      },
+      "python": {
+        "name": "Python",
+        "desc": "Análisis de datos, automatización e integración."
+      }
+    }
+  },
+  "projects": {
+    "title": "Proyectos",
+    "items": {
+      "fiddo": {
+        "title": "Fiddo",
+        "desc": "Plataforma web para la gestión de usuarios fieles y beneficios.",
+        "tech": "Next.js, TypeScript, PostgreSQL"
+      },
+      "farmacia": {
+        "title": "Farmacia",
+        "desc": "Solución integral enfocada en el control de stock y operaciones.",
+        "tech": "Java, JavaFX, SQLite"
+      },
+      "crypto": {
+        "title": "Crypto Quant",
+        "desc": "Análisis cuantitativo para seguimiento de precios y trading.",
+        "tech": "Python, FastAPI, Flet"
+      }
+    },
+    "viewRepo": "Ver Repositorio"
+  },
+  "contact": {
+    "title": "Conecta conmigo",
+    "email": "Email",
+    "message": "Mensaje",
+    "send": "Enviar",
+    "sending": "Enviando...",
+    "success": "Mensaje enviado correctamente.",
+    "error": "Error al enviar el mensaje.",
+    "errorConnection": "Error de conexión."
+  },
+  "sideNav": {
+    "about": "Sobre mí",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  }
+}

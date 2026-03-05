@@ -1,29 +1,32 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { Github } from 'lucide-react';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
+  const { t } = useTranslation();
+  
   const projects = [
     { 
-      title: "Fiddo", 
-      desc: "Plataforma web para la gestión de usuarios fieles y beneficios.", 
-      tech: "Next.js, TypeScript, PostgreSQL", 
+      title: t('projects.items.fiddo.title'), 
+      desc: t('projects.items.fiddo.desc'), 
+      tech: t('projects.items.fiddo.tech'), 
       link: "https://github.com/tobiaschoclin1/mercadoLibre.git",
       videoMp4: "/video_fiddo.mp4",
       videoMov: "/video_fiddo.mov"
     },
     { 
-      title: "Farmacia", 
-      desc: "Solución integral enfocada en el control de stock y operaciones.", 
-      tech: "Java, JavaFX, SQLite", 
+      title: t('projects.items.farmacia.title'), 
+      desc: t('projects.items.farmacia.desc'), 
+      tech: t('projects.items.farmacia.tech'), 
       link: "https://github.com/tobiaschoclin1/farmacia.git",
       videoMp4: "/video_farmacia.mp4",
       videoMov: "/video_farmacia.mov"
     },
     { 
-      title: "Crypto Quant", 
-      desc: "Análisis cuantitativo para seguimiento de precios y trading.", 
-      tech: "Python, FastAPI, Flet", 
+      title: t('projects.items.crypto.title'), 
+      desc: t('projects.items.crypto.desc'), 
+      tech: t('projects.items.crypto.tech'), 
       link: "https://github.com/tobiaschoclin1/crypto-quant.git",
       videoMp4: "/video_crypto.mp4",
       videoMov: "/video_crypto.mov"
@@ -55,7 +58,7 @@ export default function Projects() {
         viewport={{ once: true }}
         className="text-[#FF4A57] text-5xl md:text-6xl font-bold mb-16"
       >
-        Proyectos
+        {t('projects.title')}
       </motion.h2>
 
       <div
@@ -131,7 +134,7 @@ export default function Projects() {
                       {p.tech}
                     </span>
                     <div className="text-white text-sm font-semibold flex items-center gap-2">
-                      <Github size={18} /> <span>Ver Repositorio</span>
+                      <Github size={18} /> <span>{t('projects.viewRepo')}</span>
                     </div>
                   </div>
                 </div>

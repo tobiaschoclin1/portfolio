@@ -1,7 +1,9 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function SideNav() {
+  const { t } = useTranslation();
   const [activeSection, setActiveSection] = useState(0);
 
   useEffect(() => {
@@ -30,10 +32,10 @@ export default function SideNav() {
   }, []);
 
   const sections = [
-    { name: 'Sobre mí', id: 'about' },
-    { name: 'Habilidades', id: 'skills' },
-    { name: 'Proyectos', id: 'projects' },
-    { name: 'Contacto', id: 'contact' }
+    { name: t('sideNav.about'), id: 'about' },
+    { name: t('sideNav.skills'), id: 'skills' },
+    { name: t('sideNav.projects'), id: 'projects' },
+    { name: t('sideNav.contact'), id: 'contact' }
   ];
 
   return (

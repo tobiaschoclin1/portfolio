@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "brand": "amogoe."
+  },
+  "about": {
+    "name": "Tobias Choclin",
+    "role": "Software Developer",
+    "description": "Computer Engineering student and IT Support Engineer at Red Hat. Passionate about creating scalable solutions and bringing them to life through code.",
+    "downloadCV": "Download CV"
+  },
+  "skills": {
+    "title": "Skills",
+    "items": {
+      "react": {
+        "name": "React & TypeScript",
+        "desc": "Building dynamic interfaces with static typing."
+      },
+      "java": {
+        "name": "Java & Spring Boot",
+        "desc": "Creating RESTful APIs and robust architectures."
+      },
+      "node": {
+        "name": "Node.js & Express",
+        "desc": "Scalable backend and asynchronous handling."
+      },
+      "db": {
+        "name": "Databases",
+        "desc": "Relational modeling and persistence with PostgreSQL."
+      },
+      "docker": {
+        "name": "Docker",
+        "desc": "Containerization for consistent environments."
+      },
+      "python": {
+        "name": "Python",
+        "desc": "Data analysis, automation and integration."
+      }
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "items": {
+      "fiddo": {
+        "title": "Fiddo",
+        "desc": "Web platform for managing loyal users and benefits.",
+        "tech": "Next.js, TypeScript, PostgreSQL"
+      },
+      "farmacia": {
+        "title": "Pharmacy",
+        "desc": "Comprehensive solution focused on stock and operations control.",
+        "tech": "Java, JavaFX, SQLite"
+      },
+      "crypto": {
+        "title": "Crypto Quant",
+        "desc": "Quantitative analysis for price tracking and trading.",
+        "tech": "Python, FastAPI, Flet"
+      }
+    },
+    "viewRepo": "View Repository"
+  },
+  "contact": {
+    "title": "Connect with me",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send",
+    "sending": "Sending...",
+    "success": "Message sent successfully.",
+    "error": "Error sending message.",
+    "errorConnection": "Connection error."
+  },
+  "sideNav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
