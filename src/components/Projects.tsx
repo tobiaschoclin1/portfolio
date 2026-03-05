@@ -71,7 +71,7 @@ export default function Projects() {
                   ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1'
                   : i === 1
                     ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-2'
-                    : 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1'
+                    : 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1 lg:row-start-1'
                 : '';
 
             return (
@@ -98,7 +98,7 @@ export default function Projects() {
                 {isActive && (
                   <div className="absolute inset-0 w-full h-full transition-opacity duration-300 z-10 opacity-100">
                     <video
-                      className="w-full h-full object-cover pointer-events-none"
+                      className="w-full h-full object-contain pointer-events-none"
                       autoPlay
                       muted
                       loop
