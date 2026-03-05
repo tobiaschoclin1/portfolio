@@ -71,7 +71,7 @@ export default function Projects() {
                   ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1'
                   : i === 1
                     ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-2'
-                    : 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-2'
+                    : 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1'
                 : '';
 
             return (
@@ -113,12 +113,12 @@ export default function Projects() {
                 )}
 
                 <div className={`relative z-20 flex flex-col h-full transition-all duration-300 ${isActive ? 'lg:scale-95' : 'group-hover:scale-95'}`}>
-                  <div className="flex flex-col group-hover:items-center transition-all duration-500">
+                  <div className="flex flex-col transition-all duration-500">
                     <div className="w-14 h-14 mb-8 bg-[#1e1e2f] border border-gray-700 rounded-full flex items-center justify-center group-hover:border-[#FF4A57] transition-colors flex-shrink-0">
                       <span className="text-[#FF4A57] text-xl font-bold">{i + 1}</span>
                     </div>
 
-                    <div className="flex flex-col group-hover:text-center">
+                    <div className="flex flex-col">
                       <h3 className="text-2xl font-bold mb-4 group-hover:text-[#FF4A57] transition-colors">{p.title}</h3>
                       <p className="text-gray-400 text-base md:text-lg mb-8 leading-relaxed flex-grow group-hover:text-white">
                         {p.desc}
@@ -126,7 +126,7 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="mt-auto flex flex-col gap-4 group-hover:items-center">
+                  <div className="mt-auto flex flex-col gap-4">
                     <span className="text-[#FF4A57] text-xs md:text-sm font-bold tracking-widest uppercase">
                       {p.tech}
                     </span>
