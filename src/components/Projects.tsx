@@ -127,7 +127,7 @@ export default function Projects() {
                   </div>
 
                   <div className="mt-auto flex flex-col gap-4">
-                    <span className="text-[#FF4A57] text-xs md:text-sm font-bold tracking-widest uppercase">
+                    <span className="text-[#FF4A57] text-xs md:text-sm font-bold tracking-widest uppercase min-h-[2.75rem] flex items-center leading-tight">
                       {p.tech}
                     </span>
                     <div className="text-white text-sm font-semibold flex items-center gap-2">
