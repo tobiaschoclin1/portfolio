@@ -90,7 +90,7 @@ export default function Projects() {
                 }}
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredIndex(i)}
-                className={`group relative min-h-[340px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
+                className={`group relative h-[320px] md:h-[340px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                   ${isAnyProjectActive && !isActive ? 'opacity-20 scale-95 blur-sm pointer-events-none' : 'opacity-100'}
                   ${isActive ? 'z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}
                   ${activeGridPlacement}`}
