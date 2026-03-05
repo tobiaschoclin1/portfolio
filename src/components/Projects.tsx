@@ -11,7 +11,7 @@ export default function Projects() {
       title: t('projects.items.fiddo.title'), 
       desc: t('projects.items.fiddo.desc'), 
       tech: t('projects.items.fiddo.tech'), 
-      link: "https://github.com/tobiaschoclin1/mercadoLibre.git",
+      link: "https://github.com/tobiaschoclin1/fiddo.git",
       videoMp4: "/video_fiddo.mp4",
       videoMov: "/video_fiddo.mov"
     },
