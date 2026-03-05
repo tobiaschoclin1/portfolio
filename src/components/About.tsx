@@ -3,7 +3,15 @@ import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 export default function About() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  const cvFile = i18n.language === 'en' 
+    ? '/Resume Tobias Choclin 2026.pdf' 
+    : '/CV Tobias Choclin 2026.pdf';
+  
+  const cvFileName = i18n.language === 'en'
+    ? 'Resume Tobias Choclin 2026.pdf'
+    : 'CV Tobias Choclin 2026.pdf';
   
   return (
     <section id="about" className="relative py-32 flex flex-col justify-center min-h-[85vh]">
@@ -25,8 +33,8 @@ export default function About() {
         
         {/* Reemplazamos el button por un anchor tag (a) */}
         <a 
-          href="/CV Tobias Choclin 2026.pdf" 
-          download="CV Tobias Choclin 2026.pdf"
+          href={cvFile} 
+          download={cvFileName}
           className="bg-[#FF4A57] w-max text-white px-8 py-4 text-lg font-bold hover:bg-rose-600 transition hover:scale-105 transform shadow-lg shadow-[#FF4A57]/20 flex items-center gap-3"
         >
           <Download size={24} /> {t('about.downloadCV')}
