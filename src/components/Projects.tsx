@@ -96,8 +96,8 @@ export default function Projects() {
               initial="initial"
               whileInView="animate"
               whileHover={{
-                scale: 1.02,
-                y: -8,
+                scale: 1.05,
+                y: -10,
                 transition: { duration: 0.3, ease: 'easeOut' }
               }}
               viewport={{ once: true }}
@@ -108,7 +108,7 @@ export default function Projects() {
               }}
               className={`group relative overflow-hidden bg-[#27293d] p-10 transition-all duration-500 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                 ${isAnyProjectActive && !fiddoActive && !farmaciaActive && !cryptoActive ? 'opacity-25 scale-95 blur-sm pointer-events-none' : 'opacity-100'}
-                ${fiddoActive || farmaciaActive || cryptoActive ? 'col-span-1 md:col-span-2 min-h-[320px] shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
+                ${fiddoActive || farmaciaActive || cryptoActive ? 'shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}`}
             >
               {/* Video para Fiddo */}
               {isFiddo && fiddoActive && (
