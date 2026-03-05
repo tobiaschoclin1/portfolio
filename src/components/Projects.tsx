@@ -96,7 +96,7 @@ export default function Projects() {
                   ${activeGridPlacement}`}
               >
                 {isActive && (
-                  <div className="absolute inset-0 w-full h-full transition-opacity duration-300 z-10 opacity-100">
+                  <div className="absolute inset-0 w-full h-full transition-opacity duration-300 z-10 opacity-100 hidden md:block">
                     <video
                       className="w-full h-full object-contain pointer-events-none"
                       autoPlay
