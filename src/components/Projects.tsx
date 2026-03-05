@@ -58,7 +58,10 @@ export default function Projects() {
         Proyectos
       </motion.h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0">
+      <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0"
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
         <AnimatePresence>
           {projects.map((p, i) => {
             const isActive = hoveredIndex === i;
@@ -87,7 +90,6 @@ export default function Projects() {
                 }}
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredIndex(i)}
-                onMouseLeave={() => setHoveredIndex(null)}
                 className={`group relative min-h-[340px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                   ${isAnyProjectActive && !isActive ? 'opacity-20 scale-95 blur-sm pointer-events-none' : 'opacity-100'}
                   ${isActive ? 'z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}
