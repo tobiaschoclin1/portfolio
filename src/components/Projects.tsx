@@ -7,7 +7,7 @@ export default function Projects() {
     { 
       title: "Fiddo", 
       desc: "Plataforma web para la gestión de usuarios fieles y beneficios.", 
-      tech: "Node.js, Express", 
+      tech: "Next.js, TypeScript, PostgreSQL", 
       link: "https://github.com/tobiaschoclin1/mercadoLibre.git",
       videoMp4: "/video_fiddo.mp4",
       videoMov: "/video_fiddo.mov"
@@ -15,7 +15,7 @@ export default function Projects() {
     { 
       title: "Farmacia", 
       desc: "Solución integral enfocada en el control de stock y operaciones.", 
-      tech: "Java, React, PostgreSQL", 
+      tech: "Java, JavaFX, SQLite", 
       link: "https://github.com/tobiaschoclin1/farmacia.git",
       videoMp4: "/video_farmacia.mp4",
       videoMov: "/video_farmacia.mov"
@@ -23,7 +23,7 @@ export default function Projects() {
     { 
       title: "Crypto Quant", 
       desc: "Análisis cuantitativo para seguimiento de precios y trading.", 
-      tech: "Integración API, Python", 
+      tech: "Python, FastAPI, Flet", 
       link: "https://github.com/tobiaschoclin1/crypto-quant.git",
       videoMp4: "/video_crypto.mp4",
       videoMov: "/video_crypto.mov"
