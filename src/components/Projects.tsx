@@ -90,6 +90,15 @@ export default function Projects() {
                 }}
                 viewport={{ once: true }}
                 onMouseEnter={() => setHoveredIndex(i)}
+                onClick={(e) => {
+                  if (hoveredIndex === i) {
+                    // Si ya está activo, permite seguir el link
+                    return;
+                  }
+                  // Si no está activo, previene el link y activa el hover
+                  e.preventDefault();
+                  setHoveredIndex(i);
+                }}
                 className={`group relative h-[400px] md:h-[420px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
                   ${isAnyProjectActive && !isActive ? 'opacity-20 scale-95 blur-sm pointer-events-none' : 'opacity-100'}
                   ${isActive ? 'z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}
