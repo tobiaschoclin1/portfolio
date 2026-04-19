@@ -1,5 +1,5 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
-import { Github } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -7,45 +7,34 @@ export default function Projects() {
   const { t } = useTranslation();
   
   const projects = [
-    { 
-      title: t('projects.items.fiddo.title'), 
-      desc: t('projects.items.fiddo.desc'), 
-      tech: t('projects.items.fiddo.tech'), 
-      link: "https://github.com/tobiaschoclin1/fiddo.git",
-      videoMp4: "/video_fiddo.mp4",
-      videoMov: "/video_fiddo.mov"
+    {
+      title: t('projects.items.fiddo.title'),
+      desc: t('projects.items.fiddo.desc'),
+      tech: t('projects.items.fiddo.tech'),
+      link: "https://fiddo-app.onrender.com/login"
     },
-    { 
-      title: t('projects.items.farmacia.title'), 
-      desc: t('projects.items.farmacia.desc'), 
-      tech: t('projects.items.farmacia.tech'), 
-      link: "https://github.com/tobiaschoclin1/farmacia.git",
-      videoMp4: "/video_farmacia.mp4",
-      videoMov: "/video_farmacia.mov"
+    {
+      title: t('projects.items.farmacia.title'),
+      desc: t('projects.items.farmacia.desc'),
+      tech: t('projects.items.farmacia.tech'),
+      link: "https://farmacia-2xm1.onrender.com/registro"
     },
-    { 
-      title: t('projects.items.crypto.title'), 
-      desc: t('projects.items.crypto.desc'), 
-      tech: t('projects.items.crypto.tech'), 
-      link: "https://github.com/tobiaschoclin1/crypto-quant.git",
-      videoMp4: "/video_crypto.mp4",
-      videoMov: "/video_crypto.mov"
+    {
+      title: t('projects.items.crypto.title'),
+      desc: t('projects.items.crypto.desc'),
+      tech: t('projects.items.crypto.tech'),
+      link: "https://crypto-quant-pro.onrender.com/"
     }
   ];
 
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  const isAnyProjectActive = hoveredIndex !== null;
-
   const cardVariants: Variants = {
-    initial: { 
-      opacity: 0, 
-      y: 30,
-      scale: 1,
-      zIndex: 1
+    initial: {
+      opacity: 0,
+      y: 30
     },
-    animate: { 
-      opacity: 1, 
-      y: 0, 
+    animate: {
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.5 }
     }
   };
@@ -61,23 +50,9 @@ export default function Projects() {
         {t('projects.title')}
       </motion.h2>
 
-      <div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-0"
-        onMouseLeave={() => setHoveredIndex(null)}
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <AnimatePresence>
-          {projects.map((p, i) => {
-            const isActive = hoveredIndex === i;
-            const activeGridPlacement =
-              isActive
-                ? i === 0
-                  ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1'
-                  : i === 1
-                    ? 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-2'
-                    : 'md:col-span-2 md:col-start-1 lg:col-span-2 lg:col-start-1 lg:row-start-1'
-                : '';
-
-            return (
+          {projects.map((p, i) => (
               <motion.a
                 href={p.link}
                 target="_blank"
@@ -92,30 +67,9 @@ export default function Projects() {
                   transition: { duration: 0.25, ease: 'easeOut' }
                 }}
                 viewport={{ once: true }}
-                onMouseEnter={() => setHoveredIndex(i)}
-                className={`group relative h-[400px] md:h-[420px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50
-                  ${isAnyProjectActive && !isActive ? 'opacity-20 scale-95 blur-sm pointer-events-none' : 'opacity-100'}
-                  ${isActive ? 'z-50 shadow-[0_30px_80px_rgba(0,0,0,0.65)]' : 'hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]'}
-                  ${activeGridPlacement}`}
+                className="group relative h-[400px] md:h-[420px] overflow-hidden bg-[#27293d] p-10 transition-all duration-300 flex flex-col cursor-pointer border border-transparent hover:border-[#FF4A57]/50 hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
               >
-                {isActive && (
-                  <div className="absolute inset-0 w-full h-full transition-opacity duration-300 z-10 opacity-100 hidden md:block">
-                    <video
-                      className="w-full h-full object-contain pointer-events-none"
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                      preload="auto"
-                    >
-                      <source src={p.videoMp4} type="video/mp4" />
-                      <source src={p.videoMov} type="video/quicktime" />
-                    </video>
-                    <div className="absolute inset-0 bg-black/45 z-0" />
-                  </div>
-                )}
-
-                <div className={`relative z-20 flex flex-col h-full transition-all duration-300 ${isActive ? 'lg:scale-95' : 'group-hover:scale-95'}`}>
+                <div className="relative z-20 flex flex-col h-full transition-all duration-300 group-hover:scale-95">
                   <div className="flex flex-col transition-all duration-500">
                     <div className="w-14 h-14 mb-8 bg-[#1e1e2f] border border-gray-700 rounded-full flex items-center justify-center group-hover:border-[#FF4A57] transition-colors flex-shrink-0">
                       <span className="text-[#FF4A57] text-xl font-bold">{i + 1}</span>
@@ -134,13 +88,12 @@ export default function Projects() {
                       {p.tech}
                     </span>
                     <div className="text-white text-sm font-semibold flex items-center gap-2">
-                      <Github size={18} /> <span>{t('projects.viewRepo')}</span>
+                      <ExternalLink size={18} /> <span>{t('projects.viewRepo')}</span>
                     </div>
                   </div>
                 </div>
               </motion.a>
-            );
-          })}
+          ))}
         </AnimatePresence>
       </div>
     </section>

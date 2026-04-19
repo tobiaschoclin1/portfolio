@@ -3,7 +3,7 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import SideNav from './components/SideNav';
-import { Github, Mail, Globe } from 'lucide-react';
+import { Mail, Globe } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export default function App() {
@@ -28,9 +28,6 @@ export default function App() {
             <Globe size={24} />
             <span className="text-sm">{i18n.language.toUpperCase()}</span>
           </button>
-          <a href="https://github.com/tobiaschoclin1" target="_blank" rel="noreferrer" className="hover:text-[#FF4A57] transition">
-            <Github size={24} />
-          </a>
           <a href="mailto:tobiaschoclin1@gmail.com" className="hover:text-[#FF4A57] transition">
             <Mail size={24} />
           </a>
