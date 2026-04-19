@@ -1,6 +1,5 @@
 import { motion, AnimatePresence, type Variants } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
-import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
