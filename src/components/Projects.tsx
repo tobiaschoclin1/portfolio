@@ -10,7 +10,7 @@ export default function Projects() {
       title: t('projects.items.fiddo.title'),
       desc: t('projects.items.fiddo.desc'),
       tech: t('projects.items.fiddo.tech'),
-      link: "https://fiddo-app-production.up.railway.app/register"
+      link: "https://fiddo-app.vercel.app/register"
     },
     {
       title: t('projects.items.farmacia.title'),
