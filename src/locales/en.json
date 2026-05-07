@@ -12,28 +12,28 @@
     "title": "Skills",
     "items": {
       "react": {
-        "name": "React & TypeScript",
-        "desc": "Building dynamic interfaces with static typing."
+        "name": "React & Next.js",
+        "desc": "Full-stack development with React, TypeScript and server-side rendering."
       },
       "java": {
         "name": "Java & Spring Boot",
-        "desc": "Creating RESTful APIs and robust architectures."
+        "desc": "Building RESTful APIs and robust web applications."
       },
-      "node": {
-        "name": "Node.js & Express",
-        "desc": "Scalable backend and asynchronous handling."
+      "python": {
+        "name": "Python & FastAPI",
+        "desc": "High-performance backend with asynchronous APIs."
       },
-      "db": {
-        "name": "Databases",
-        "desc": "Relational modeling and persistence with PostgreSQL."
+      "mongodb": {
+        "name": "MongoDB",
+        "desc": "Flexible and scalable NoSQL databases."
+      },
+      "postgresql": {
+        "name": "PostgreSQL",
+        "desc": "Relational databases with integrity and consistency."
       },
       "docker": {
         "name": "Docker",
-        "desc": "Containerization for consistent environments."
-      },
-      "python": {
-        "name": "Python",
-        "desc": "Data analysis, automation and integration."
+        "desc": "Containerization for consistent deployments."
       }
     }
   },
@@ -43,17 +43,17 @@
       "fiddo": {
         "title": "Fiddo",
         "desc": "Web platform for managing loyal users and benefits.",
-        "tech": "Next.js, TypeScript, PostgreSQL"
+        "tech": "Next.js, TypeScript, MongoDB"
       },
       "farmacia": {
         "title": "Pharmacy",
-        "desc": "Comprehensive solution focused on stock and operations control.",
-        "tech": "Java, JavaFX, SQLite"
+        "desc": "Web-based pharmacy management system with stock and operations control.",
+        "tech": "Spring Boot, PostgreSQL, Thymeleaf"
       },
       "crypto": {
         "title": "Crypto Quant",
-        "desc": "Quantitative analysis for price tracking and trading.",
-        "tech": "Python, FastAPI, Flet"
+        "desc": "Quantitative analysis platform for cryptocurrency price tracking and trading.",
+        "tech": "Python, FastAPI, JavaScript"
       }
     },
     "viewRepo": "View Project"

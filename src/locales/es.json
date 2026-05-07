@@ -12,28 +12,28 @@
     "title": "Habilidades",
     "items": {
       "react": {
-        "name": "React & TypeScript",
-        "desc": "Desarrollo de interfaces dinámicas y tipado estático."
+        "name": "React & Next.js",
+        "desc": "Desarrollo full-stack con React, TypeScript y renderizado del lado del servidor."
       },
       "java": {
         "name": "Java & Spring Boot",
-        "desc": "Creación de APIs RESTful y arquitecturas robustas."
+        "desc": "Creación de APIs RESTful y aplicaciones web robustas."
       },
-      "node": {
-        "name": "Node.js & Express",
-        "desc": "Backend escalable y manejo de asincronía."
+      "python": {
+        "name": "Python & FastAPI",
+        "desc": "Backend de alto rendimiento con APIs asíncronas."
       },
-      "db": {
-        "name": "Bases de Datos",
-        "desc": "Modelado y persistencia relacional con PostgreSQL."
+      "mongodb": {
+        "name": "MongoDB",
+        "desc": "Bases de datos NoSQL flexibles y escalables."
+      },
+      "postgresql": {
+        "name": "PostgreSQL",
+        "desc": "Bases de datos relacionales con integridad y consistencia."
       },
       "docker": {
         "name": "Docker",
-        "desc": "Containerización para asegurar entornos consistentes."
-      },
-      "python": {
-        "name": "Python",
-        "desc": "Análisis de datos, automatización e integración."
+        "desc": "Containerización para despliegues consistentes."
       }
     }
   },
@@ -43,17 +43,17 @@
       "fiddo": {
         "title": "Fiddo",
         "desc": "Plataforma web para la gestión de usuarios fieles y beneficios.",
-        "tech": "Next.js, TypeScript, PostgreSQL"
+        "tech": "Next.js, TypeScript, MongoDB"
       },
       "farmacia": {
         "title": "Farmacia",
-        "desc": "Solución integral enfocada en el control de stock y operaciones.",
-        "tech": "Java, JavaFX, SQLite"
+        "desc": "Sistema web de gestión farmacéutica con control de stock y operaciones.",
+        "tech": "Spring Boot, PostgreSQL, Thymeleaf"
       },
       "crypto": {
         "title": "Crypto Quant",
-        "desc": "Análisis cuantitativo para seguimiento de precios y trading.",
-        "tech": "Python, FastAPI, Flet"
+        "desc": "Análisis cuantitativo para seguimiento de precios y trading de criptomonedas.",
+        "tech": "Python, FastAPI, JavaScript"
       }
     },
     "viewRepo": "Ver Proyecto"

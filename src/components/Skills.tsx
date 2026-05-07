@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion';
-import { SiReact, SiSpringboot, SiDocker, SiNodedotjs, SiPostgresql, SiPython } from 'react-icons/si';
+import { SiReact, SiSpringboot, SiPython, SiMongodb, SiPostgresql, SiDocker } from 'react-icons/si';
 import { useTranslation } from 'react-i18next';
 
 export default function Skills() {
   const { t } = useTranslation();
-  
+
   const skills = [
     { name: t('skills.items.react.name'), desc: t('skills.items.react.desc'), icon: <SiReact size={32} /> },
     { name: t('skills.items.java.name'), desc: t('skills.items.java.desc'), icon: <SiSpringboot size={32} /> },
-    { name: t('skills.items.node.name'), desc: t('skills.items.node.desc'), icon: <SiNodedotjs size={32} /> },
-    { name: t('skills.items.db.name'), desc: t('skills.items.db.desc'), icon: <SiPostgresql size={32} /> },
-    { name: t('skills.items.docker.name'), desc: t('skills.items.docker.desc'), icon: <SiDocker size={32} /> },
     { name: t('skills.items.python.name'), desc: t('skills.items.python.desc'), icon: <SiPython size={32} /> },
+    { name: t('skills.items.mongodb.name'), desc: t('skills.items.mongodb.desc'), icon: <SiMongodb size={32} /> },
+    { name: t('skills.items.postgresql.name'), desc: t('skills.items.postgresql.desc'), icon: <SiPostgresql size={32} /> },
+    { name: t('skills.items.docker.name'), desc: t('skills.items.docker.desc'), icon: <SiDocker size={32} /> },
   ];
 
   return (
