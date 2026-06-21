@@ -16,7 +16,7 @@ export default function Projects() {
       title: t('projects.items.farmacia.title'),
       desc: t('projects.items.farmacia.desc'),
       tech: t('projects.items.farmacia.tech'),
-      link: "https://farmacia-2xm1.onrender.com/registro"
+      link: "https://sprightly-blancmange-25decb.netlify.app/dashboard"
     },
     {
       title: t('projects.items.crypto.title'),
