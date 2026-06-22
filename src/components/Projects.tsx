@@ -22,7 +22,7 @@ export default function Projects() {
       title: t('projects.items.crypto.title'),
       desc: t('projects.items.crypto.desc'),
       tech: t('projects.items.crypto.tech'),
-      link: "https://crypto-quant-pro.onrender.com/"
+      link: "https://crypto-quant-pro-3cd0b7edd414.herokuapp.com/"
     }
   ];
 
