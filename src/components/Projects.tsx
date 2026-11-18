@@ -10,19 +10,19 @@ export default function Projects() {
       title: t('projects.items.fiddo.title'),
       desc: t('projects.items.fiddo.desc'),
       tech: t('projects.items.fiddo.tech'),
-      link: "https://fiddo-app.vercel.app/register"
+      link: "https://fiddo-app.vercel.app/login"
     },
     {
       title: t('projects.items.farmacia.title'),
       desc: t('projects.items.farmacia.desc'),
       tech: t('projects.items.farmacia.tech'),
-      link: "https://sprightly-blancmange-25decb.netlify.app/dashboard"
+      link: "https://farmacia-2xm1.onrender.com/login"
     },
     {
       title: t('projects.items.crypto.title'),
       desc: t('projects.items.crypto.desc'),
       tech: t('projects.items.crypto.tech'),
-      link: "https://crypto-quant-pro-3cd0b7edd414.herokuapp.com/"
+      link: "https://crypto-quant-pro.onrender.com/"
     }
   ];
 

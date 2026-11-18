@@ -42,18 +42,18 @@
     "items": {
       "fiddo": {
         "title": "Fiddo",
-        "desc": "Plataforma web para la gestión de usuarios fieles y beneficios.",
-        "tech": "Next.js, TypeScript, MongoDB"
+        "desc": "Plataforma web para gestionar usuarios fieles y beneficios, con integración a Mercado Libre.",
+        "tech": "Next.js, TypeScript, Prisma, MongoDB, NextAuth, Mercado Libre API"
       },
       "farmacia": {
         "title": "Farmacia",
-        "desc": "Sistema web de gestión farmacéutica con control de stock y operaciones.",
-        "tech": "Spring Boot, PostgreSQL, Thymeleaf"
+        "desc": "Sistema web de gestión farmacéutica con control de stock, lotes FEFO y alertas de vencimiento.",
+        "tech": "Spring Boot, Spring Security, PostgreSQL, Flyway, Thymeleaf, Docker"
       },
       "crypto": {
         "title": "Crypto Quant",
-        "desc": "Análisis cuantitativo para seguimiento de precios y trading de criptomonedas.",
-        "tech": "Python, FastAPI, JavaScript"
+        "desc": "Análisis cuantitativo con precios en tiempo real desde APIs públicas con respaldo automático.",
+        "tech": "Python, FastAPI, JavaScript, Kraken API"
       }
     },
     "viewRepo": "Ver Proyecto"
