@@ -54,7 +54,7 @@ export default function Contact() {
         
         <div className="flex items-center gap-4 mt-4">
           <button type="submit" className="bg-[#FF4A57] text-white px-10 py-4 text-lg font-bold hover:bg-rose-600 transition flex items-center justify-center gap-3 w-max hover:scale-105 transform">
-            {t('contact.send')} <span className="text-xl">▶</span>
+            {t('contact.send')}
           </button>
           {status && <span className="text-gray-300 text-sm font-semibold">{status}</span>}
         </div>
