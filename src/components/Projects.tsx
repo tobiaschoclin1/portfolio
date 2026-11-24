@@ -16,13 +16,13 @@ export default function Projects() {
       title: t('projects.items.farmacia.title'),
       desc: t('projects.items.farmacia.desc'),
       tech: t('projects.items.farmacia.tech'),
-      link: "https://farmacia-2xm1.onrender.com/login"
+      link: "https://farmacia-tobias.azurewebsites.net/login"
     },
     {
       title: t('projects.items.crypto.title'),
       desc: t('projects.items.crypto.desc'),
       tech: t('projects.items.crypto.tech'),
-      link: "https://crypto-quant-pro.onrender.com/"
+      link: "https://crypto-quant-tobias.azurewebsites.net/"
     }
   ];
 
